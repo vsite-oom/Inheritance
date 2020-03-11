@@ -26,5 +26,25 @@ namespace Nasljeđivanje
         {
             this.Close();
         }
+
+        private void textBoxShippingName_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text == "Default")
+            {
+                tb.ResetText();
+                tb.ForeColor = SystemColors.WindowText;
+            }
+        }
+
+        private void textBoxShippingName_Leave(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if(tb.TextLength==0)
+            {
+                tb.Text = "Default";
+                tb.ForeColor = SystemColors.GrayText;
+            }
+        }
     }
 }
