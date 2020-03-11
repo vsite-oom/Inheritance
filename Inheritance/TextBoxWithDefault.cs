@@ -22,6 +22,7 @@ namespace Nasljeđivanje
             base.OnPaint(pe);
             if(TextLength == 0)
             {
+
                 DrawDefaultText(pe);
             }
         }
