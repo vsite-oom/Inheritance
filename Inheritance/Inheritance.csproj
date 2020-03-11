@@ -52,6 +52,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="textBoxWithDefault.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="textBoxWithDefault.Designer.cs">
+      <DependentUpon>textBoxWithDefault.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

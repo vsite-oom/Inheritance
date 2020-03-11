@@ -16,15 +16,26 @@ namespace Nasljeđivanje
             InitializeComponent();
         }
 
-        private void buttonCancel_Click(object sender, EventArgs e)
+      
+
+        private void textBoxShippingName_Enter(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to cancel?", "Order Details") == DialogResult.OK)
-                this.Close();
+            TextBox tb = (TextBox)sender;
+            if (tb.Text == "Default")
+            {
+                tb.ResetText();
+                tb.ForeColor = SystemColors.WindowText;
+            }
         }
 
-        private void buttonOk_Click(object sender, EventArgs e)
+        private void textBoxShippingName_Leave(object sender, EventArgs e)
         {
-            this.Close();
+            TextBox tb = (TextBox)sender;
+            if (tb.TextLength == 0)
+            {
+                tb.Text = "Default";
+                tb.ForeColor = SystemColors.GrayText;
+            }
         }
     }
 }
