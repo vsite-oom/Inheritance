@@ -33,12 +33,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFamilyName = new System.Windows.Forms.TextBox();
             this.groupBoxCustomer = new System.Windows.Forms.GroupBox();
-            this.textBoxStreet = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxTown = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBoxPostcode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBoxTown = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxStreet = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxShippingPostcode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.textBoxShippingAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxShippingFamilyName = new System.Windows.Forms.TextBox();
+            this.textBoxShippingFamilyName = new TextBoxWithDefault();
             this.textBoxShippingName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
@@ -109,22 +109,22 @@
             this.groupBoxCustomer.TabStop = false;
             this.groupBoxCustomer.Text = "Customer";
             // 
-            // textBoxStreet
+            // textBoxPostcode
             // 
-            this.textBoxStreet.Location = new System.Drawing.Point(98, 81);
-            this.textBoxStreet.Name = "textBoxStreet";
-            this.textBoxStreet.Size = new System.Drawing.Size(150, 20);
-            this.textBoxStreet.TabIndex = 5;
-            this.textBoxStreet.Text = "Trg Bana Jelačića 2";
+            this.textBoxPostcode.Location = new System.Drawing.Point(98, 141);
+            this.textBoxPostcode.Name = "textBoxPostcode";
+            this.textBoxPostcode.Size = new System.Drawing.Size(150, 20);
+            this.textBoxPostcode.TabIndex = 9;
+            this.textBoxPostcode.Text = "10000";
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "&Street address:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "&Postcode:";
             // 
             // textBoxTown
             // 
@@ -143,22 +143,22 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "&Town/City:";
             // 
-            // textBoxPostcode
+            // textBoxStreet
             // 
-            this.textBoxPostcode.Location = new System.Drawing.Point(98, 141);
-            this.textBoxPostcode.Name = "textBoxPostcode";
-            this.textBoxPostcode.Size = new System.Drawing.Size(150, 20);
-            this.textBoxPostcode.TabIndex = 9;
-            this.textBoxPostcode.Text = "10000";
+            this.textBoxStreet.Location = new System.Drawing.Point(98, 81);
+            this.textBoxStreet.Name = "textBoxStreet";
+            this.textBoxStreet.Size = new System.Drawing.Size(150, 20);
+            this.textBoxStreet.TabIndex = 5;
+            this.textBoxStreet.Text = "Trg Bana Jelačića 2";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 144);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "&Postcode:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "&Street address:";
             // 
             // groupBox1
             // 
@@ -249,6 +249,9 @@
             this.textBoxShippingName.Name = "textBoxShippingName";
             this.textBoxShippingName.Size = new System.Drawing.Size(150, 20);
             this.textBoxShippingName.TabIndex = 1;
+            this.textBoxShippingName.TextChanged += new System.EventHandler(this.textBoxShippingName_TextChanged);
+            this.textBoxShippingName.Enter += new System.EventHandler(this.textBoxShippingName_Enter);
+            this.textBoxShippingName.Leave += new System.EventHandler(this.textBoxShippingName_Leave);
             // 
             // label9
             // 
