@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TextBoxWithDefault.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextBoxWithDefault.Designer.cs">
+      <DependentUpon>TextBoxWithDefault.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
