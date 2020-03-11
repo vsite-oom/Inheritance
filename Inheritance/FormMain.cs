@@ -29,7 +29,7 @@ namespace Nasljeđivanje
 
         private void textBoxShippingName_Enter(object sender, EventArgs e)
         {
-            TextBox tb = (TextBox) sender;
+            TextBox tb = (TextBox)sender;
             if (tb.Text == "Default")
             {
                 tb.ResetText();
@@ -39,7 +39,7 @@ namespace Nasljeđivanje
 
         private void textBoxShippingName_Leave(object sender, EventArgs e)
         {
-            TextBox tb = (TextBox) sender;
+            TextBox tb = (TextBox)sender;
             if (tb.TextLength == 0)
             {
                 tb.Text = "Default";
