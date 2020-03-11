@@ -16,6 +16,7 @@ namespace Nasljeđivanje
             InitializeComponent();
         }
 
+
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to cancel?", "Order Details") == DialogResult.OK)

@@ -15,6 +15,7 @@ namespace Nasljeđivanje
         {
             InitializeComponent();
             SetStyle(ControlStyles.UserPaint,TextLength == 0);
+
         }
 
         protected override void OnPaint(PaintEventArgs pe)

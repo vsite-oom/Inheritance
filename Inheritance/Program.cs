@@ -17,5 +17,6 @@ namespace Nasljeđivanje
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());
         }
+
     }
 }
