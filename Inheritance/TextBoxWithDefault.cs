@@ -16,7 +16,11 @@ namespace Nasljeđivanje
             InitializeComponent();
             SetStyle(ControlStyles.UserPaint, TextLength == 0);
         }
-        
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            SetStyle(ControlStyles.UserPaint,true);
+        }
         protected override void OnPaint(PaintEventArgs pe)
         {
             base.OnPaint(pe);
