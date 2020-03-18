@@ -43,8 +43,8 @@ namespace Nasljeđivanje
 		private void DrawDefaultText(PaintEventArgs pe)
 		{
 			var rect = ClientRectangle;
-			rect.Offset(2, 1);
-			TextRenderer.DrawText(pe.Graphics, "Default", Font, ClientRectangle, SystemColors.GrayText, TextFormatFlags.TextBoxControl);
+			rect.Offset(-2, 1);
+			TextRenderer.DrawText(pe.Graphics, "Default", Font, rect, SystemColors.GrayText, TextFormatFlags.TextBoxControl);
 		}
 	}
 }
