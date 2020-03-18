@@ -14,7 +14,13 @@ namespace Nasljeđivanje
         public TextBoxWithDefault()
         {
             InitializeComponent();
-            SetStyle(ControlStyles.UserPaint,TextLength == 0);
+            //SetStyle(ControlStyles.UserPaint,TextLength == 0);
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            SetStyle(ControlStyles.UserPaint, TextLength == 0);
         }
 
         protected override void OnPaint(PaintEventArgs pe)
@@ -35,7 +41,9 @@ namespace Nasljeđivanje
 
         private void DrawDefaultText(PaintEventArgs pe)
         {
-            TextRenderer.DrawText(pe.Graphics, text, Font, ClientRectangle, SystemColors.GrayText, TextFormatFlags.TextBoxControl);
+            var rect = ClientRectangle;
+            rect.Offset(-2, 1);
+            TextRenderer.DrawText(pe.Graphics, text, Font, rect, SystemColors.GrayText, TextFormatFlags.TextBoxControl);
         }
         private string text = "Default";
     }
