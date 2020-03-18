@@ -16,7 +16,7 @@ namespace Nasljeđivanje
             InitializeComponent();
             SetStyle(ControlStyles.UserPaint, TextLength == 0);
         }
-
+        
         protected override void OnPaint(PaintEventArgs pe)
         {
             base.OnPaint(pe);
@@ -28,6 +28,8 @@ namespace Nasljeđivanje
 
         private void DrawDefaultText(PaintEventArgs pe)
         {
+            var rect = ClientRectangle;
+            rect.Offset(-2, 1);
             TextRenderer.DrawText(pe.Graphics, "Default", Font, ClientRectangle, SystemColors.GrayText, TextFormatFlags.Default);
         }
     }
