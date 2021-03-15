@@ -26,5 +26,10 @@ namespace Nasljeđivanje
         {
             this.Close();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
