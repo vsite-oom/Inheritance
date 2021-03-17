@@ -48,7 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxShippingFamilyName = new System.Windows.Forms.TextBox();
-            this.textBoxShippingName = new System.Windows.Forms.TextBox();
+            this.textBoxShippingName = new TextBoxDefault();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
