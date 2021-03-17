@@ -26,5 +26,9 @@ namespace Nasljeđivanje
         {
             this.Close();
         }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }
